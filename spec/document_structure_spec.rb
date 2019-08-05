@@ -41,9 +41,9 @@ RSpec.describe "Well-Formed HTML Document" do
         expect(content_section.children.any? {|ch| ch.name == "img"}).to be == true, "No 'img' tags found"
         images = content_section.children.select {|ch| ch.name == "img"}
         expect(images.length).to be >= 3, "Make sure to include all three 'p' tags"
-        expect(images[0].attributes["src"].value).to eq("./images/transportation/transit.jpg")
-        expect(images[1].attributes["src"].value).to eq("./images/garden.jpg")
-        expect(images[2].attributes["src"].value).to eq("./images/transportation/camels-in-truck.jpg")
+        expect(images[0].attributes["src"].value).to eq("images/transportation/transit.jpg")
+        expect(images[1].attributes["src"].value).to eq("images/garden.jpg")
+        expect(images[2].attributes["src"].value).to eq("images/transportation/camels-in-truck.jpg")
 
         expect(content_section.children.any? {|ch| ch.name == "a"}).to be == true, "No 'a' tags found"
         links = content_section.children.select {|ch| ch.name == "a"}
